@@ -2,6 +2,7 @@ package ru.gb.course1.hometask01;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,7 +14,7 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private TextView textViewEnterLoginPassword;
     private Button buttonLogIn;
     private EditText editTextLogin;
@@ -29,15 +30,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         textViewEnterLoginPassword = findViewById(R.id.text_view_enter_log_pass);
-        textViewEnterLoginPassword.setText("Введите логин и пароль");
-
 
         editTextLogin = findViewById(R.id.edit_text_login);
         editTextPassword = findViewById(R.id.edit_text_password);
 
         buttonLogIn = findViewById(R.id.button_log_in);
-        buttonLogIn.setOnClickListener(view -> {
-        });
+        buttonLogIn.setOnClickListener(this);
 
         checkBoxRemember = findViewById(R.id.checkbox_remember);
         checkBoxRemember.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -53,6 +51,19 @@ public class MainActivity extends AppCompatActivity {
 
         calendarView =findViewById(R.id.calendar_view);
 
+
+    }
+
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.button_log_in:
+                Intent intent = new Intent(this, UserInfo.class);
+                startActivity(intent);
+                break;
+            default:break;
+        }
 
     }
 }

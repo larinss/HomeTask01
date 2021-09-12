@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HomeTask01">
         <activity
+            android:name=".UserInfo"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
