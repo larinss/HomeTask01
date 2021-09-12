@@ -21,13 +21,19 @@
             android:id="@+id/edit_text_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Логин"/>
+            android:hint="Логин" />
 
         <EditText
             android:id="@+id/edit_text_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Пароль"/>
+            android:hint="Пароль" />
+
+        <CheckBox
+            android:id="@+id/checkbox_remember"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="запомнить" />
 
         <Button
             android:id="@+id/button_log_in"
