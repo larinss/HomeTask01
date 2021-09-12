@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CalendarView;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private CheckBox checkBoxRemember;
     private Switch switchInvisibility;
     private ToggleButton toggleButtonHelp;
+    private CalendarView calendarView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
         switchInvisibility = findViewById(R.id.switch_invisibility);
 
         toggleButtonHelp = findViewById(R.id.toggle_button_help);
+
+        calendarView =findViewById(R.id.calendar_view);
 
 
     }
