@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         toggleButtonHelp = findViewById(R.id.toggle_button_help);
 
-        calendarView =findViewById(R.id.calendar_view);
+        calendarView = findViewById(R.id.calendar_view);
 
 
     }
@@ -57,12 +57,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.button_log_in:
                 Intent intent = new Intent(this, UserInfo.class);
                 startActivity(intent);
                 break;
-            default:break;
+            default:
+                break;
         }
 
     }
